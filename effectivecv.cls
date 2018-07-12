@@ -5,14 +5,15 @@
 \LoadClassWithOptions{article}
 
 % Document configuration
+\RequirePackage[margin=5mm]{geometry}
+
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand*\sfdefault{lmss} % Use Latin Modern Sans Serif
 
-\RequirePackage[margin=5mm]{geometry}
-\setlength\parindent{0pt} % Deactivate content indent
+\setlength{\parindent}{0mm} % Deactivate content indent
 
 \RequirePackage{enumitem}
-\setlist[itemize]{noitemsep, topsep=0mm, leftmargin=7mm}
+\setlist[itemize]{noitemsep, topsep=0mm, partopsep=0mm, leftmargin=7mm}
 
 \RequirePackage[hidelinks]{hyperref}
 \urlstyle{same} % URL in sans-serif
@@ -129,7 +130,7 @@
     \textcolor{cvcolorsecond}{\textbf{#1}} & \textcolor{cvcolorsecond}{\small #4} \\
     \textcolor{cvcolorthird}{\small #2} & \textcolor{cvcolorthird}{\small #3}
   \end{tabularx}%
-  \par\addvspace{0.4mm}%
+  \par\addvspace{0.5mm}%
   #5%
   \par\medskip%
 }
