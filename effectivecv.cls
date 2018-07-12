@@ -123,14 +123,14 @@
   \par\medskip%
 }
 
-\newcommand{\cventry}[6]{
+\newcommand{\cventry}[5]{
   \par\smallskip%
   \begin{tabularx}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}%
-    \textcolor{cvcolorsecond}{\textbf{#1}} & \textcolor{cvcolorsecond}{\small #4 -- #5} \\
+    \textcolor{cvcolorsecond}{\textbf{#1}} & \textcolor{cvcolorsecond}{\small #4} \\
     \textcolor{cvcolorthird}{\small #2} & \textcolor{cvcolorthird}{\small #3}
   \end{tabularx}%
   \par\addvspace{0.4mm}%
-  #6%
+  #5%
   \par\medskip%
 }
 
