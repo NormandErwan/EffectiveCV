@@ -1,0 +1,113 @@
+% A4 paper by default, use 'letterpaper' for US letter instead. Set font size from 10pt to 12pt.
+\documentclass[12pt, a4paper]{effectivecv}
+
+% If you use accented characters.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % Replace with your language
+\usepackage{textcomp}
+
+% The color palette, use the predefined color names and the dvips colors.
+%\cvcolors{RoyalBlue}{black}{darkgray}
+
+% Customize the column size a fraction of the page size.
+%\setlength{\cvmaincolumnlength}{0.73\textwidth}
+%\setlength{\cvsidecolumnlength}{0.24\textwidth}
+
+% Personal information configuration. Comment not wanted fields.
+\author{John Doe}
+\title{CV title}
+\address{street and number – postcode city – country}
+\email{john.doe@example.com}
+\phone{+1 (123) 456 789}
+\linkedin{JohnDoe}
+\github{JohnDoe}
+\portrait{portrait.png}
+
+\begin{document}
+
+% Print the personal information.
+\makecvtitle
+
+% CV content
+% On each column, use sections to organize your content. Add item with \cvitem (simpler) and \cventry (more complex layout).
+\cvcontent[leftsidecolumn]{% Options are: leftsidecolumn, rigthsidecolumn and onecolumn
+  \section{Skills}
+  \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+  \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+  \section{Languages}
+  \cvitem{Language}{Proficiency}
+  \cvitem{Language}{Proficiency}
+
+  \section{Projects}
+  \cvitem{Title}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+  
+  \cvitem{Title}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+  \section{Interests}
+  \cvitem{} % No title
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+}{%
+  \section{Summary}
+  \cvitem{} % No title
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+
+  \section{Experience}
+  \cventry{Title}
+    {Company}
+    {Location}
+    {Start date -- End date}
+    {
+      \begin{itemize}
+        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      \end{itemize}
+    }
+
+  \cventry{Title}
+    {Company}
+    {Location}
+    {Start date -- End date}
+    {
+      \begin{itemize}
+        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      \end{itemize}
+    }
+
+    \cventry{Title}
+      {Company}
+      {Location}
+      {Start date -- End date}
+      {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+
+  \section{Education}
+  \cventry{Degree}
+    {School}
+    {Location}
+    {From to years}
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+
+  \cventry{Degree}
+    {School}
+    {Location}
+    {From to years}
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+
+  \section{Volunteer Experience}
+  \cventry{Role}
+    {Organization}
+    {Location}
+    {Start date -- End date}
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+    
+  \cventry{Role}
+    {Organization}
+    {Location}
+    {Start date -- End date}
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+}
+
+\end{document}
