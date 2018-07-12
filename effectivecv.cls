@@ -39,6 +39,19 @@
 \setnewlength{\cvmaincolumnlength}{0.73\textwidth}
 \setnewlength{\cvsidecolumnlength}{0.24\textwidth}
 
+% Footer
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0mm}
+\renewcommand{\footrulewidth}{0mm}
+\fancyhfoffset{0mm}
+\newcommand{\cvfooter}[3]{%
+  \fancyfoot[L]{\textcolor{cvcolorthird}{#1}}%
+  \fancyfoot[C]{\textcolor{cvcolorthird}{#2}}%
+  \fancyfoot[R]{\textcolor{cvcolorthird}{#3}}%
+}
+
 % Utilities
 \RequirePackage{ifthen}
 \newcommand{\ifempty}[3]{%
