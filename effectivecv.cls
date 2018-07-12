@@ -11,7 +11,7 @@
 \renewcommand*\sfdefault{lmss} % Use Latin Modern Sans Serif
 
 % Deactivate content indent
-\setlength{\parindent}{0mm}
+\RequirePackage{parskip}
 
 % Lists
 \RequirePackage{enumitem}
