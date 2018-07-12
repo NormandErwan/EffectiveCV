@@ -1,23 +1,27 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{effectivecv}[2018/07/11 Effective CV]
 
-% Options
 \LoadClassWithOptions{article}
 
-% Document configuration
+% Page configuration
 \RequirePackage[margin=5mm]{geometry}
 
+% Font
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand*\sfdefault{lmss} % Use Latin Modern Sans Serif
 
-\setlength{\parindent}{0mm} % Deactivate content indent
+% Deactivate content indent
+\setlength{\parindent}{0mm}
 
+% Lists
 \RequirePackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=0mm, partopsep=0mm, leftmargin=7mm}
 
+% URLs
 \RequirePackage[hidelinks]{hyperref}
 \urlstyle{same} % URL in sans-serif
 
+% Colors
 \RequirePackage[dvipsnames]{xcolor}
 \newcommand{\cvcolors}[4]{%
   \colorlet{cvcolorfirst}{#1}%
@@ -25,12 +29,6 @@
   \colorlet{cvcolorthird}{#3}%
 }
 \cvcolors{RoyalBlue}{black}{darkgray} % Default colors
-
-\RequirePackage{graphicx}
-\RequirePackage{fullwidth}
-\RequirePackage{tabularx}
-\RequirePackage{multirow}
-\RequirePackage{fontawesome}
 
 % Lengths
 \newcommand{\setnewlength}[2]{%
@@ -46,6 +44,12 @@
 \newcommand{\ifempty}[3]{%
   \ifthenelse{\equal{#1}{}}{#2}{#3}%
 }
+
+% Other packages
+\RequirePackage{graphicx}
+\RequirePackage{tabularx}
+\RequirePackage{multirow}
+\RequirePackage{fontawesome}
 
 % Title
 \newcommand{\address}[1]{\renewcommand\@address{#1}}
@@ -66,7 +70,7 @@
 \newcommand{\portrait}[1]{\renewcommand\@portrait{#1}}
 \newcommand{\@portrait}{}
 
-\newcommand{\@makecvtitlecontent}{%
+\newcommand{\@cvheader}{%
   \multirow{3}{*}[0.75em]{\ifempty{\@portrait}{}{\includegraphics[height=6.5em]{\@portrait}}} & \textbf{\huge\@author} \\[.25em]
   & \textcolor{cvcolorfirst}{\Large\@title} \\[.75em]
   & \textcolor{cvcolorthird}{\small\@address} \\
@@ -78,19 +82,19 @@
     }%
 }
 
-\newcommand{\makecvtitle}{%
+\newcommand{\cvheader}{%
   \begin{minipage}[t]{\cvcontentwidth}%
     \ifempty{\@portrait}{%
       \begin{tabularx}{\cvcontentwidth}{@{}l@{}X@{}}%
-        \@makecvtitlecontent
+        \@cvheader
       \end{tabularx}%
     }{%
       \begin{tabularx}{\cvcontentwidth}{@{}l X@{}}%
-        \@makecvtitlecontent
+        \@cvheader
       \end{tabularx}%
     }%
   \end{minipage}%
-  \par\medskip%
+  \par\smallskip%
 }
 
 % CV commands
@@ -118,13 +122,13 @@
   \par%
 }
 
-\newcommand{\cvitem}[2]{
+\newcommand{\cvitem}[2]{%
   \ifempty{#1}{}{\textcolor{cvcolorsecond}{\textbf{#1}}\\}%
   #2%
   \par\medskip%
 }
 
-\newcommand{\cventry}[5]{
+\newcommand{\cventry}[5]{%
   \par\smallskip%
   \begin{tabularx}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}%
     \textcolor{cvcolorsecond}{\textbf{#1}} & \textcolor{cvcolorsecond}{\small #4} \\
