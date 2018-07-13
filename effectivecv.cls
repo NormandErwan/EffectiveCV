@@ -84,8 +84,8 @@
 \newcommand{\@portrait}{}
 
 \newcommand{\@cvheader}{%
-  \multirow{3}{*}[0.75em]{\ifempty{\@portrait}{}{\includegraphics[height=6.5em]{\@portrait}}} & \textbf{\huge\@author} \\[.25em]
-  & \textcolor{cvcolorfirst}{\Large\@title} \\[.75em]
+  \multirow{3}{*}[0.75em]{\ifempty{\@portrait}{}{\includegraphics[height=6.5em]{\@portrait}}} & \textbf{\huge\@author} \\[1mm]
+  & \textcolor{cvcolorfirst}{\Large\@title} \\
   & \textcolor{cvcolorthird}{\small\@address} \\
   & \textcolor{cvcolorthird}{\small%
       \href{mailto:\@email}{\faEnvelopeO~\@email}%
