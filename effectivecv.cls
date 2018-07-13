@@ -1,7 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{effectivecv}[2018/07/11 Effective CV]
 
-% Base class and options
+%% Base class and options
+
 \LoadClassWithOptions{article}
 
 \newif\if@coverletter\@coverletterfalse
@@ -10,6 +11,8 @@
 }
 
 \ProcessOptions\relax
+
+%% Packages and class configuration
 
 % Page configuration
 \RequirePackage[margin=5mm]{geometry}
@@ -75,6 +78,8 @@
 \RequirePackage{multirow}
 \RequirePackage{fontawesome}
 
+%% Class commands
+
 % Header commands
 \newcommand{\address}[1]{\renewcommand\@address{#1}}
 \newcommand{\@address}{}
@@ -95,7 +100,7 @@
 \newcommand{\@portrait}{}
 
 \newcommand{\@cvheader}{%
-  \multirow{3}{*}[0.75em]{\ifempty{\@portrait}{}{\includegraphics[height=6.5em]{\@portrait}}} & \textbf{\huge\@author} \\[1mm]
+  \multirow{3}{*}[0.75em]{\ifempty{\@portrait}{}{\includegraphics[height=6em]{\@portrait}}} & \textbf{\huge\@author} \\[1mm]
   & \textcolor{cvcolorfirst}{\Large\@title} \\
   & \textcolor{cvcolorthird}{\small\@address} \\
   & \textcolor{cvcolorthird}{\small%
