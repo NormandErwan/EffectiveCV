@@ -6,7 +6,7 @@ This template is heavily inspired by [Modern CV](https://launchpad.net/moderncv)
 
 | CV | Cover letter |
 |:---:|:---:|
-| [![CV](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/cv.png)](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/cv.pdf) | [![Cover letter](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/coverletter1.png)](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/coverletter1.pdf) |
+| [![CV](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/cv.png)](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/cv.pdf) | [![Cover letter](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/coverletter.png)](https://raw.githubusercontent.com/NormandErwan/EffectiveCV/master/coverletter.pdf) |
 
 ## Support
 
