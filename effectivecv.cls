@@ -1,10 +1,21 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{effectivecv}[2018/07/11 Effective CV]
 
+% Base class and options
 \LoadClassWithOptions{article}
+
+\newif\if@coverletter\@coverletterfalse
+\DeclareOption{coverletter}{
+  \@coverlettertrue
+}
+
+\ProcessOptions\relax
 
 % Page configuration
 \RequirePackage[margin=5mm]{geometry}
+\if@coverletter
+  \geometry{margin=2cm}
+\fi
 
 % Font
 \renewcommand{\familydefault}{\sfdefault}
@@ -64,7 +75,7 @@
 \RequirePackage{multirow}
 \RequirePackage{fontawesome}
 
-% Title
+% Header commands
 \newcommand{\address}[1]{\renewcommand\@address{#1}}
 \newcommand{\@address}{}
 
