@@ -152,4 +152,19 @@
   \par\medskip%
 }
 
+% Cover letter commands
+\newcommand{\lettersection}[2][L]{%
+  \par\bigskip%
+  \ifthenelse{\equal{#1}{R}}{%
+    \begin{flushright}#2\end{flushright}
+  }{%
+    \begin{flushleft}#2\end{flushleft}
+  }
+  \par\bigskip%
+}
+
+\newcommand{\letterclosing}{%
+  \lettersection[L]{\textbf{\@author}}%
+}
+
 \endinput

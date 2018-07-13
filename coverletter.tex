@@ -1,0 +1,64 @@
+% A4 paper by default, use 'letterpaper' for US letter instead. Set font size from 10pt to 12pt.
+\documentclass[12pt, a4paper]{effectivecv}
+
+% If you use accented characters.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % Replace with your language
+\usepackage{textcomp}
+
+% Page margins.
+\geometry{margin=2cm}
+
+% The color palette, use the predefined color names and the dvips colors.
+%\cvcolors{RoyalBlue}{black}{darkgray}
+
+% Personal information configuration. Comment not wanted fields.
+\author{John Doe}
+\title{CV title}
+\address{123 street -- Postcode City -- Country}
+\email{john.doe@example.com}
+\phone{+1 (123) 456 789}
+\linkedin{JohnDoe}
+\github{JohnDoe}
+%\portrait{portrait.png}
+
+% The document footer, with three arguments: left side, center of the footer, right side. Comment to hide it.
+%\cvfooter{\today}{John Doe -- Cover Letter}{lad}
+
+\begin{document}
+
+% Print the personal information.
+\cvheader
+
+% Letter header
+\lettersection[R]{% [R]ight alignment
+  Company, Inc.\\
+  123 street\\
+  Postcode City
+}
+
+\lettersection[R]{%
+  \today%
+}
+
+\lettersection[L]{% [L]eft alignment
+  Job Application for xxx.\\
+  Attached: Curriculum Vitae.
+}
+
+% Letter content
+Dear Mr./Ms./Dr. LastName,
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis pretium leo, a facilisis nisi. Quisque id fringilla tellus, ut varius arcu. Praesent non convallis sapien, a sodales purus. Proin ut mi vel diam maximus tristique interdum et dolor. Quisque pretium dolor non justo malesuada mollis. Proin maximus maximus consequat. Proin sed sapien sed tortor ullamcorper dictum nec et nisi.
+
+Vestibulum tristique eros tortor, et porta lacus facilisis a. Pellentesque eget dolor quam. In hac habitasse platea dictumst. Morbi mauris quam, lacinia sit amet tellus vitae, viverra rhoncus nulla. Curabitur porta leo suscipit lectus tristique, at imperdiet mauris lacinia. Ut tempus faucibus velit, aliquam vehicula magna condimentum ac. Cras ut laoreet nibh, ut porttitor magna. Sed malesuada condimentum ante sit amet iaculis. Cras semper lacinia odio. Maecenas aliquet orci libero, id rutrum orci vestibulum at. Donec finibus enim ut dui malesuada, in rhoncus tortor elementum. Nulla eleifend nibh at tincidunt congue. Integer a mi ut ante pulvinar venenatis. Donec congue est eget quam auctor, vel volutpat elit suscipit. Nam ut erat quam.
+
+Vestibulum mattis at lacus a pretium. In elementum neque et nisi sagittis, imperdiet convallis erat posuere. Curabitur porta condimentum sapien, quis molestie lectus vehicula nec. Fusce ligula odio, pretium sit amet pellentesque sed, posuere nec massa. Ut sed nibh vitae felis placerat pellentesque nec ut quam. Pellentesque vestibulum vestibulum risus, ut pulvinar ante tempor vel. Nulla vel pretium ligula. Aenean consequat velit consequat, ultrices dui sit amet, efficitur sapien. Suspendisse eu fringilla ex. 
+
+Sincerely,
+
+% Print the signature.
+\letterclosing
+
+\end{document}
