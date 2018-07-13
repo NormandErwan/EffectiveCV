@@ -22,7 +22,7 @@
 
 % Font
 \renewcommand{\familydefault}{\sfdefault}
-\renewcommand*\sfdefault{lmss} % Use Latin Modern Sans Serif
+\renewcommand*{\sfdefault}{lmss} % Use Latin Modern Sans Serif
 
 % Deactivate content indent
 \RequirePackage{parskip}
@@ -81,45 +81,46 @@
 %% Class commands
 
 % Header commands
-\newcommand{\address}[1]{\renewcommand\@address{#1}}
-\newcommand{\@address}{}
 
-\newcommand{\email}[1]{\renewcommand\@email{#1}}
-\newcommand{\@email}{}
-
-\newcommand{\phone}[1]{\renewcommand\@phone{#1}}
-\newcommand{\@phone}{}
-
-\newcommand{\linkedin}[1]{\renewcommand\@linkedin{#1}}
-\newcommand{\@linkedin}{}
-
-\newcommand{\github}[1]{\renewcommand\@github{#1}}
-\newcommand{\@github}{}
-
-\newcommand{\portrait}[1]{\renewcommand\@portrait{#1}}
+\newcommand{\portrait}[1]{\renewcommand{\@portrait}{#1}}
 \newcommand{\@portrait}{}
 
-\newcommand{\@cvheader}{%
+\newcommand{\address}[1]{\renewcommand{\@address}{#1}}
+\newcommand{\@address}{}
+
+\newcommand{\extrainfo}[1]{\renewcommand{\@extrainfo}{#1}}
+\newcommand{\@extrainfo}{}
+
+\newcommand{\cvlink}[3]{%
+  \ifempty{#1}{%
+    \ifempty{#2}{}{#2~}#3%
+  }{%
+    \href{#1}{\ifempty{#2}{}{#2~}#3}%
+  }%
+}
+
+\newcommand{\email}[1]{\cvlink{mailto:#1}{\faEnvelopeO}{#1}}
+\newcommand{\github}[1]{\cvlink{https://github.com/#1}{\faGithub}{#1}}
+\newcommand{\linkedin}[1]{\cvlink{https://linkedin.com/in/#1}{\faLinkedin}{#1}}
+\newcommand{\phone}[1]{\cvlink{}{\faPhone}{#1}}
+\newcommand{\twitter}[1]{\cvlink{https://twitter.com/#1}{\faTwitter}{#1}}
+
+\newcommand{\@cvheadercontent}{%
   \multirow{3}{*}[0.75em]{\ifempty{\@portrait}{}{\includegraphics[height=6em]{\@portrait}}} & \textbf{\huge\@author} \\[1mm]
   & \textcolor{cvcolorfirst}{\Large\@title} \\
   & \textcolor{cvcolorthird}{\small\@address} \\
-  & \textcolor{cvcolorthird}{\small%
-      \href{mailto:\@email}{\faEnvelopeO~\@email}%
-      \ifempty{\@phone}{}{\ | \faPhone~\@phone}%
-      \ifempty{\@linkedin}{}{\ | \href{https://linkedin.com/in/\@linkedin}{\faLinkedin~\@linkedin}}%
-      \ifempty{\@github}{}{\ | \href{https://github.com/\@github}{\faGithub~\@github}}%
-    }%
+  & \textcolor{cvcolorthird}{\small\@extrainfo}
 }
 
 \newcommand{\cvheader}{%
   \begin{minipage}[t]{\cvcontentwidth}%
     \ifempty{\@portrait}{%
       \begin{tabularx}{\cvcontentwidth}{@{}l@{}X@{}}%
-        \@cvheader
+        \@cvheadercontent
       \end{tabularx}%
     }{%
       \begin{tabularx}{\cvcontentwidth}{@{}l X@{}}%
-        \@cvheader
+        \@cvheadercontent
       \end{tabularx}%
     }%
   \end{minipage}%

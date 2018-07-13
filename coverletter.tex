@@ -7,7 +7,7 @@
 \usepackage[english]{babel} % Replace with your language
 \usepackage{textcomp}
 
-% Redefine page margins if needed.
+% Redefine page margins.
 %\geometry{margin=2cm}
 
 % The color palette, use the predefined color names and the dvips colors.
@@ -16,12 +16,11 @@
 % Personal information configuration. Comment not wanted fields.
 \author{John Doe}
 \title{CV title}
-\address{123 street -- Postcode City -- Country}
-\email{john.doe@example.com}
-\phone{+1 (123) 456 789}
-\linkedin{JohnDoe}
-\github{JohnDoe}
+\address{123 street -- City -- Country}
 %\portrait{portrait.png}
+\extrainfo{% Add extra information and links
+  \email{john.doe@example.com} | \phone{+1 (123) 456 789} | \linkedin{JohnDoe} | \github{JohnDoe} | \cvlink{https://stackoverflow.com/users/user-id}{\faStackOverflow}{user-name} % A personalized link
+}
 
 % The document footer, with three arguments: left side, center of the footer, right side. Comment to hide it.
 %\cvfooter{\today}{John Doe -- Cover Letter}{lad}
@@ -33,9 +32,9 @@
 
 % Letter header
 \lettersection[R]{% [R]ight alignment
-  Company, Inc.\\
+  Company\\
   123 street\\
-  Postcode City
+  City
 }
 
 \lettersection[R]{%
