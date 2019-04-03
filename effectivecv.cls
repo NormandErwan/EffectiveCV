@@ -15,7 +15,7 @@
 %% Packages and class configuration
 
 % Page configuration
-\RequirePackage[margin=5mm]{geometry}
+\RequirePackage[margin=5mm, bottom=15mm]{geometry}
 \if@coverletter
   \geometry{margin=2cm}
 \fi
@@ -56,7 +56,7 @@
 % Footer
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % Clear footer
 \renewcommand{\headrulewidth}{0mm}
 \renewcommand{\footrulewidth}{0mm}
 \fancyhfoffset{0mm}
