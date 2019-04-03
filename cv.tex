@@ -35,12 +35,11 @@
 % Print the personal information.
 \cvheader
 
-% CV content
+% CV content:
 % On each column, use sections to organize your content. Add item with \cvitem (simpler) and \cventry (more complex layout).
 \cvcontent[leftsidecolumn]{% Options are: leftsidecolumn, rigthsidecolumn and onecolumn
   \section{Skills}
   \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
-
   \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
 
   \section{Languages}
@@ -49,7 +48,6 @@
 
   \section{Projects}
   \cvitem{Title}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
-  
   \cvitem{Title}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
 
   \section{Interests}
@@ -113,6 +111,58 @@
     {Organization}
     {Location}
     {Start date -- End date}
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+}
+
+% If you want additional pages close the previous \cvcontent and new one on the new page.
+\newpage
+\cvcontent[leftsidecolumn]{% Options are: leftsidecolumn, rigthsidecolumn and onecolumn
+  \section{More}
+  \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+  \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+  \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+  \cvitem{Category}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+}{%
+  \section{Researches}
+  \cventry{Title}
+    {Institution}
+    {Location}
+    {Start date -- End date}
+    {
+      \begin{itemize}
+        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      \end{itemize}
+    }
+
+  \cventry{Title}
+    {Institution}
+    {Location}
+    {Start date -- End date}
+    {
+      \begin{itemize}
+        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      \end{itemize}
+    }
+
+    \cventry{Title}
+      {Institution}
+      {Location}
+      {Start date -- End date}
+      {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+
+  \section{Honours and Awards}
+  \cventry{Title}
+    {Institution}
+    {Location}
+    {Date}
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
+    
+  \cventry{Title}
+    {Institution}
+    {Location}
+    {Date}
     {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.}
 }
 
